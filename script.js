@@ -64,6 +64,7 @@ function displayMessage(message) {
 function endGame() {
     userInput.value = '';
     userInput.setAttribute('disabled', '');
+    submit.setAttribute('disabled','')
     p.classList.add('button');
     p.innerHTML = `<h2 id = 'newGame'> START a new game </h2>`;
     reset.appendChild(p);
@@ -81,6 +82,7 @@ function newGame() {
         lowOrhi.innerHTML = '';
         last_result.innerHTML = `${11 - numGuess}`;
         userInput.removeAttribute('disabled');
+        submit.removeAttribute('disabled');
         reset.removeChild(p);
         playGame = true;
     });
